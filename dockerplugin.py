@@ -50,7 +50,7 @@ class Stats:
     def emit(cls, container, type, value, t=None, type_instance=None):
         val = collectd.Values()
         val.plugin = 'docker'
-        val.plugin_instance = container['Name']
+        val.plugin_instance = container['Image']
 
         if type:
             val.type = type
